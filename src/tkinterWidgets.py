@@ -13,11 +13,8 @@ settings = Button(constants.root, image = gearImage, text = "settings", command 
 
 resetButton = Button(constants.root, text = "Reset", command = reset) 
 
-
-
-
-# directory buttons
 mailButton = Button(constants.root, text = "Mail", command = emailMenu, width = 7)
+
 googleButton = Button(constants.root, text = "Google", command = lambda: openWebsite("google.com")) 
 canvasButton = Button(constants.root, text = "Canvas", command = lambda: openWebsite("hse.instructure.com")) 
 skywardButton = Button(constants.root, text = "Skyward", command = lambda: openWebsite("https://sis.hse.k12.in.us/scripts/wsisa.dll/WService=wsEAplus/seplog01.w")) 
@@ -33,10 +30,3 @@ timerButton = Button(constants.root, text = "Start Timer", command = timerComman
 frame = Frame(constants.root, bd = 4, bg = "grey")
 
 notes = Text(frame)
-
-layoutEdit = Button(constants.root, text = "Editor", width = 7)
-layoutEdit.config(command = lambda: editEnable(tkFrame = frame, tkSettings = settings, editButton = layoutEdit))
-
-# calander buttons 
-
-sundayButton = Button(constants.root, text = "Mail", command = calander, width = 7)
