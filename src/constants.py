@@ -3,7 +3,7 @@ from helper import *
 import json
 
 # JSON 
-with open('src\data\settings.json') as file: 
+with open('data\settings.json') as file: 
     file = json.load(file)
     emailEnding = file['userEmail'][str(file['userEmail']).index("@") + 1: ]
 

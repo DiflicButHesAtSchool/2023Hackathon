@@ -21,7 +21,7 @@ def collapse(button: Button) -> None:
     else:
         button.place(anchor = N, width = 20, height = constants.heightOnClick)
         constants.collapsed = True
-    playsound(r"src\audio\buttonClick.mp3")
+    playsound(r"audio\buttonClick.mp3")
         
 def settingsMenu() -> None:
     

@@ -5,7 +5,7 @@ from datetime import datetime
 import constants
 
 # Images
-gearImage = PhotoImage(file = 'src\images\gear.png')
+gearImage = PhotoImage(file = 'images\gear.png')
 
 button = Button(constants.root, command = lambda: collapse(button))
 
