@@ -75,7 +75,21 @@ def reset(set: Button, tkFrame: Frame):
     set.place(anchor = N, relx = constants.buttonDefaultRelx, rely = constants.buttonDefaultRely)  
     tkFrame.place(anchor = N, relx = constants.notesWindowDefaultRelx, rely = constants.notesWindowDefaultRely)  
     
-    
+def calender(day1, day2, day3, day4, day5, day6, day7):
+    day1.place(anchor = N, relx = 0.2, rely = 0.35)
+    day2.place(anchor = N, relx = 0.3, rely = 0.35)
+    day3.place(anchor = N, relx = 0.4, rely = 0.35)
+    day4.place(anchor = N, relx = 0.5, rely = 0.35)
+    day5.place(anchor = N, relx = 0.6, rely = 0.35)
+    day6.place(anchor = N, relx = 0.7, rely = 0.35)
+    day6.place(anchor = N, relx = 0.8, rely = 0.35)
+
+
+
+
+
+
+
 def labelUpdate(label: Label) -> None:
     label.config(text = f"{datetime.now().replace(microsecond=0).strftime('%d-%m-20%y - %I:%M:%S')}")
     constants.root.after(1000, lambda: labelUpdate(label)) 

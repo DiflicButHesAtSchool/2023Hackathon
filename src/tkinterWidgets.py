@@ -4,6 +4,26 @@ from helper import *
 from datetime import datetime 
 import constants
 
+# calander days
+
+sunday = Label(constants.root, text ="Sunday")
+
+monday = Label(constants.root, text ="Monday")
+
+tuesday = Label(constants.root, text ="Tuesday")
+
+wednesday = Label(constants.root, text ="Wednesday")
+
+thurday = Label(constants.root, text ="Thursday")
+
+friday = Label(constants.root, text ="Friday")
+
+saturday = Label(constants.root, text ="Saturday")
+
+
+
+
+
 # Images
 gearImage = PhotoImage(file = 'images\gear.png')
 
@@ -14,11 +34,15 @@ settings = Button(constants.root, image = gearImage, text = "settings", command 
 resetButton = Button(constants.root, text = "Reset", command = reset) 
 
 mailButton = Button(constants.root, text = "Mail", command = emailMenu, width = 7)
+calenderButton = Button(constants.root, text = "Calender", command = calender(sunday,monday,tuesday,wednesday,thurday,friday,saturday), width = 7) 
 
 googleButton = Button(constants.root, text = "Google", command = lambda: openWebsite("google.com")) 
 canvasButton = Button(constants.root, text = "Canvas", command = lambda: openWebsite("hse.instructure.com")) 
 skywardButton = Button(constants.root, text = "Skyward", command = lambda: openWebsite("https://sis.hse.k12.in.us/scripts/wsisa.dll/WService=wsEAplus/seplog01.w")) 
 cleverButton = Button(constants.root, text = "Clever", command = lambda: openWebsite("clever.com")) 
+
+
+
 
 timeLabel = Label(constants.root, text = f"{datetime.now().replace(microsecond=0).strftime('%d-%m-20%y - %I:%M:%S')}", 
             width = 40, wraplength = 500, justify = LEFT, 
@@ -30,3 +54,4 @@ timerButton = Button(constants.root, text = "Start Timer", command = timerComman
 frame = Frame(constants.root, bd = 4, bg = "grey")
 
 notes = Text(frame)
+
