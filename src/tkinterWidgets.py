@@ -5,7 +5,7 @@ from datetime import datetime
 import constants
 
 # Images
-gearImage = PhotoImage(file = 'images\gear.png')
+gearImage = PhotoImage(file = 'src\images\gear.png')
 
 button = Button(constants.root, command = lambda: collapse(button))
 
@@ -33,3 +33,5 @@ notes = Text(frame)
 
 layoutEdit = Button(constants.root, text = "Editor", width = 7)
 layoutEdit.config(command = lambda: editEnable(tkFrame = frame, tkSettings = settings, editButton = layoutEdit))
+
+

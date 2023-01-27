@@ -3,7 +3,7 @@ from helper import *
 import json
 
 # JSON 
-with open('data\settings.json') as file: 
+with open('src\data\settings.json') as file: 
     file = json.load(file)
     emailEnding = file['userEmail'][str(file['userEmail']).index("@") + 1: ]
 
@@ -30,3 +30,4 @@ editEnabled = False
 # doubles 
 buttonDefaultRelx, buttonDefaultRely = 0.95, 0.01
 notesWindowDefaultRelx, notesWindowDefaultRely = 0.5, 0.5
+

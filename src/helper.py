@@ -2,9 +2,12 @@ from tkinter import *
 from datetime import datetime
 from playsound import playsound
 from email.message import EmailMessage
-import constants, smtplib, ssl, webbrowser
+import constants, smtplib, ssl, webbrowser, json
+
 
 mouseX, mouseY = 0, 0
+
+
 
 def rgbToColor(rgb: tuple) -> str: 
     # Code from stackoverflow about changing rgb to tkinter readable color
@@ -18,7 +21,7 @@ def collapse(button: Button) -> None:
     else:
         button.place(anchor = N, width = 20, height = constants.heightOnClick)
         constants.collapsed = True
-    playsound(r"audio\buttonClick.mp3")
+    playsound(r"src\audio\buttonClick.mp3")
         
 def settingsMenu() -> None:
     
@@ -87,6 +90,8 @@ def editEnable(tkFrame: Frame, tkSettings: Button, editButton: Button):
         editButton.config(bg = "white")
         make_undragable(tkFrame)
         make_undragable(tkSettings)
+        
+        
         constants.editEnabled = False
 
 def motion(event):
@@ -108,8 +113,10 @@ def on_drag_start(event):
 
 def on_drag_motion(event):
     widget = event.widget
-    x = widget.winfo_x() + widget._drag_start_x + event.x
-    y = widget.winfo_y() + widget._drag_start_y + event.y
+    x = widget.winfo_x() + event.x 
+    y = widget.winfo_y() + event.y
+    verible2 = x
+    varible = y
     widget.place(x=x, y=y)
 
 def timerCommand() -> None:
